@@ -192,6 +192,8 @@
   
     .product-title {
       font-size: 20px;
+      white-space: normal;
+      word-wrap: break-word;
     }
   
     .old-price {
