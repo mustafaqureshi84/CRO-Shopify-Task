@@ -1,0 +1,165 @@
+/* -------------------------
+   Basic Reset
+-------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Center the card on the page */
+  html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Adjust if needed */
+  }
+  
+  /* -------------------------
+     Card Container
+  -------------------------- */
+  .product-card {
+    width: 846px;            /* Matches your desired width */
+    height: 279px;           /* Matches your desired height */
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 262px 1fr;
+    grid-template-rows: auto auto; 
+    grid-template-areas:
+      "image details"
+      "actions actions";
+    font-family: "Rubik", sans-serif;
+  }
+  
+  /* -------------------------
+     Product Image (Left)
+  -------------------------- */
+  .product-image {
+    grid-area: image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* -------------------------
+     Product Details (Right)
+  -------------------------- */
+  .product-details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 17px;
+  }
+  
+  /* Title + Rating + Identifier on the left */
+  .info-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Rating */
+  .product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; /* Adjust if needed */
+  }
+  .stars {
+    display: inline-flex;
+    margin-right: 15px;
+  }
+  .review-count {
+    font-size: 14px;
+    color: #808080;
+    line-height: 100%;
+    font-style: italic;
+  }
+  
+  /* Identifier text */
+  .identifier {
+    font-size: 14px;
+    color: #757575;
+    margin-top: 28px; /* Adjust if needed */
+  }
+  
+  /* -------------------------
+     Price Section (Right side)
+  -------------------------- */
+  .price-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Right-align old + new price */
+    margin-right: 30px;
+  }
+  .old-price {
+    font-size: 18px;
+    line-height: 120%;
+    color: #000000;
+    opacity: 50%;
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+  .new-price {
+    font-size: 43px;
+    line-height: 120%;
+    color: #941B0C;  /* Red color */
+    font-weight: 600;
+  }
+  
+  /* -------------------------
+     Bottom Bar (Actions)
+  -------------------------- */
+  .product-actions {
+    grid-area: actions;
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 180%;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-family: "Rubik", sans-serif;
+    gap: 15px; /* Space between icon and text */
+  }
+  .btn:hover {
+    background-color: #f7f7f7;
+  }
+  .btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  
