@@ -1,6 +1,6 @@
 /* -------------------------
    Basic Reset
--------------------------- */
+------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@
   
   /* -------------------------
      Card Container
-  -------------------------- */
+  ------------------------- */
   .product-card {
     width: 846px;            /* Matches your desired width */
     height: 279px;           /* Matches your desired height */
@@ -40,7 +40,7 @@
   
   /* -------------------------
      Product Image (Left)
-  -------------------------- */
+  ------------------------- */
   .product-image {
     grid-area: image;
     display: flex;
@@ -54,7 +54,7 @@
   
   /* -------------------------
      Product Details (Right)
-  -------------------------- */
+  ------------------------- */
   .product-details {
     grid-area: details;
     display: flex;
@@ -105,7 +105,7 @@
   
   /* -------------------------
      Price Section (Right side)
-  -------------------------- */
+  ------------------------- */
   .price-section {
     display: flex;
     flex-direction: column;
@@ -129,7 +129,7 @@
   
   /* -------------------------
      Bottom Bar (Actions)
-  -------------------------- */
+  ------------------------- */
   .product-actions {
     grid-area: actions;
     background-color: #F2F2F2;
@@ -161,5 +161,58 @@
     width: 24px;
     height: 24px;
   }
-
+  
+  /* -------------------------
+     Responsive Styles for Mobile
+  ------------------------- */
+  @media (max-width: 768px) {
+    .product-card {
+      width: 90%;
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "image"
+        "details"
+        "actions";
+    }
+  
+    .product-image {
+      padding: 10px;
+    }
+  
+    .product-details {
+      padding: 10px;
+    }
+  
+    .price-section {
+      margin-right: 0;
+      align-items: flex-start;
+    }
+  
+    .product-title {
+      font-size: 20px;
+    }
+  
+    .old-price {
+      font-size: 16px;
+    }
+  
+    .new-price {
+      font-size: 35px;
+    }
+  
+    .product-actions {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+      
+      .btn {
+        max-width: 300px;
+      }
+  }
   
